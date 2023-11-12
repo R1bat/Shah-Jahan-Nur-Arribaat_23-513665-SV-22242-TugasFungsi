@@ -1,0 +1,33 @@
+#memanggil modul JSON
+import json
+
+#JSON format dalam string
+data_JSON =  """
+{
+	"size": "Medium",
+	"price": 15.67,
+	"toppings": ["Mushrooms", "Extra Cheese", "Pepperoni", "Basil"],
+	"client": {
+		"name": "Jane Doe",
+		"phone": "455-344-234",
+		"email": "janedoe@email.com"
+	}
+}
+"""
+
+# konversi JSON string ke dictionary
+data_dict = json.loads(data_JSON)
+
+print(data_dict["client"]["name"])
+
+# python Dictionary
+client = {
+    "name": "Nora",
+    "age": 56,
+    "id": "45355",
+    "eye_color": "green",
+    "wears_glasses": False
+}
+
+# mengubah dictionary ke JSON
+client_JSON = json.dumps(client)
